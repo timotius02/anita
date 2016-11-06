@@ -53,7 +53,7 @@ function set_clothes(clothes, selection) {
         $('#hacker').show();
         $('#doctor').show();
       }
-      else if (selection === 'business_suit' || selection === 'chef' || selection === 'astronaut') {
+      else if (selection === 'business_suit' || selection === 'chef' || selection === 'astronaut' || selection === 'yoga') {
         $('.outfit').hide();
         $('#barebody').show();
         $('#' + selection).show();
