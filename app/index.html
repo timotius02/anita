@@ -1,0 +1,279 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hoyahacks</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+    <script src="scripts/blockly_compressed.js"></script>
+    <script src="scripts/javascript_compressed.js"></script>
+    <script src="scripts/blocks_compressed.js"></script>
+    <script src="scripts/en.js"></script>
+    <script>
+      Blockly.HSV_SATURATION = 1; 
+      Blockly.HSV_VALUE = 1; 
+      Blockly.Blocks['set_clothes'] = {
+        init: function() {
+          this.jsonInit({
+            "message0": "Set %1 to %2",
+            "args0": [
+              {
+                "type": "field_dropdown",
+                "name": "CLOTHES",
+                "options": [
+                  [ "Outfit", "Outfit" ],
+                  [ "Accessory", "Accessory" ],
+                  [ "Hat", "Hat"],
+                  [ "Shirt", "Shirt"],
+                  [ "Pant", "Pant"]
+                ]
+              },
+              {
+                "type": "input_value",
+                "name": "VALUE"
+              }
+            ],
+            "colour": 160,
+            "previousStatement": null,
+            "nextStatement": null,
+          });
+        }
+      };
+
+      Blockly.JavaScript['set_clothes'] = function(block) {
+
+        var input1 = block.getFieldValue('CLOTHES');
+        var input2 = Blockly.JavaScript.valueToCode(block, 'VALUE', Blockly.JavaScript.ORDER_NONE);
+        // var argument0 = Blockly.JavaScript.valueToCode(block, 'VALUE',
+        //     Blockly.JavaScript.ORDER_FUNCTION_CALL) || '\'\'';
+        return 'set_clothes('+ '"'+ input1+'", "'+ input2+'"'+');';
+      };
+
+      Blockly.Blocks['business_suit'] = {
+        init: function() {
+          this.jsonInit({
+            "message0": "Business Suit",
+            "colour": 42,
+            "output": "String"
+          });
+        }
+      };
+
+      Blockly.JavaScript['business_suit'] = function(block) {
+        return ["business_suit"]
+      };
+
+      Blockly.Blocks['chef'] = {
+        init: function() {
+          this.jsonInit({
+            "message0": "Chef",
+            "colour": 42,
+            "output": "String"
+          });
+        }
+      };
+      Blockly.JavaScript['chef'] = function(block) {
+        return ["chef"]
+      };
+
+      Blockly.Blocks['doctor'] = {
+        init: function() {
+          this.jsonInit({
+            "message0": "Doctor",
+            "colour": 42,
+            "output": "String"
+          });
+        }
+      };
+      Blockly.JavaScript['doctor'] = function(block) {
+        return ["doctor"]
+      };
+
+      Blockly.Blocks['firefighter'] = {
+        init: function() {
+          this.jsonInit({
+            "message0": "FireFighter",
+            "colour": 42,
+            "output": "String"
+          });
+        }
+      };
+      Blockly.JavaScript['firefighter'] = function(block) {
+        return ["firefighter"]
+      };
+
+      Blockly.Blocks['hacker'] = {
+        init: function() {
+          this.jsonInit({
+            "message0": "Hacker",
+            "colour": 42,
+            "output": "String"
+          });
+        }
+      };
+      Blockly.JavaScript['hacker'] = function(block) {
+        return ["hacker"]
+      };
+
+      Blockly.Blocks['astronaut'] = {
+        init: function() {
+          this.jsonInit({
+            "message0": "Astronaut",
+            "colour": 42,
+            "output": "String"
+          });
+        }
+      };
+      Blockly.JavaScript['astronaut'] = function(block) {
+        return ["astronaut"]
+      };
+
+      Blockly.Blocks['firefighter_hat'] = {
+        init: function() {
+          this.jsonInit({
+            "message0": "FireFighter Hat",
+            "colour": 287,
+            "output": "String"
+          });
+        }
+      };
+      Blockly.JavaScript['firefighter_hat'] = function(block) {
+        return ["firefighter_hat"]
+      };
+      Blockly.Blocks['chef_hat'] = {
+        init: function() {
+          this.jsonInit({
+            "message0": "Chef Hat",
+            "colour": 287,
+            "output": "String"
+          });
+        }
+      };
+      Blockly.JavaScript['chef_hat'] = function(block) {
+        return ["chef_hat"]
+      };
+
+      Blockly.Blocks['astronaut_hat'] = {
+        init: function() {
+          this.jsonInit({
+            "message0": "Astronaut Hat",
+            "colour": 287,
+            "output": "String"
+          });
+        }
+      };
+
+      Blockly.JavaScript['astronaut_hat'] = function(block) {
+        return ["astronaut_hat"]
+      };
+
+       Blockly.Blocks['surgeon_mask'] = {
+        init: function() {
+          this.jsonInit({
+            "message0": "Surgeon Mask",
+            "colour": 122,
+            "output": "String"
+          });
+        }
+      };
+      Blockly.JavaScript['surgeon_mask'] = function(block) {
+        return ["surgeon_mask"]
+      };
+    </script>
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="row">
+<!--       <img class="bg_image" src="images/test.jpg" alt="image"> -->
+
+      <div class="bg_image">
+        <img id="barebody" class="person" src="images/barebody.png" alt="image">
+        <img id="business_suit" class="person hidden outfit" src="images/businessSuit.png" alt="image">
+        <img id="chef" class="person hidden outfit" src="images/chefBody.png" alt="image">
+        <img id="hacker" class="person hidden outfit" src="images/hoya.png" alt="image">
+        <img id="doctor" class="person hidden outfit" src="images/doctor.png" alt="image">
+        <img id="firefighter" class="person hidden outfit" src="images/firefighter.png" alt="image">
+        <img id="astronaut" class="person hidden outfit" src="images/astronaut.png" alt="image">
+
+        <img id="firefighter_hat" class="person hat hidden" src="images/firefighterHat.png" alt="image">
+        <img id="chef_hat" class="chefHat hat hidden" src="images/chefHat.png" alt="image">
+        <img id="astronaut_hat" class="person hat hidden" src="images/astroHelmet.png" alt="image">
+
+        <img id="surgeon_mask" class="person accessory hidden" src="images/surgeonMask.png" alt="image">
+      </div>
+      <div class="dark_grey right" id="blocklyArea">
+        <div id="blocklyDiv" style="position: absolute"></div>
+      </div>      
+    </div>
+    <div  id="footer" class="dark_grey">
+      <div class="slot outfits">
+        <p class="text">Outfits</p>
+      </div>
+      <div class="slot accessories">
+        <p class="text">Accessories</p>
+      </div>
+      <div class="slot hats">
+        <p class="text">Hats</p>
+      </div>
+      <div class="slot shirts">
+        <p class="text">Shirts</p>
+      </div>
+      <div class="slot pants">
+        <p class="text">Pants</p>
+      </div>
+
+    </div>
+    
+    <xml id="toolbox" style="display: none">
+      <category name="Edit Clothes" colour=226>
+        <block type="set_clothes"></block>
+      </category>
+      <category name="Outfits" colour="42">
+        <block type="business_suit"></block>
+        <block type="hacker"></block>
+        <block type="chef"></block>
+        <block type="doctor"></block>
+        <block type="firefighter"></block>
+        <block type="astronaut"></block>
+      </category>
+      <category name="Hats" colour="287">
+        <block type="firefighter_hat"></block>
+        <block type="chef_hat"></block>
+        <block type="astronaut_hat"></block>
+      </category>
+      <category name="Accessories" colour="122">
+        <block type="surgeon_mask"></block>
+      </category>
+    </xml>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

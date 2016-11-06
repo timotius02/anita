@@ -1,0 +1,102 @@
+// bower:scss
+// endbower
+
+body {
+  background: #fafafa;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.bg_image {
+  background-image: url("../images/test.jpg");
+  background-size: cover;
+  height: 70vh;
+  width: 50vw;
+  margin: 7px;
+  position: relative;
+  overflow: hidden;
+}
+
+.person {
+  height: 100%;
+  padding-top: 15%;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: auto;
+  position: absolute;
+}
+
+.chefHat {
+  height: 140%;
+  padding-left: 120px;
+  top: -22vh;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: auto;
+  position: absolute;
+}
+
+.row {
+  display: flex;
+}
+
+.right {
+  flex: 1;
+  margin: 7px;
+}
+.dark_grey {
+  background: #95989a;
+}
+
+#footer {
+  height: 25vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.slot {
+  margin: 0 20px;
+  width: 140px;
+  height: 45px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 7px rgba(0,0,0,.3);
+
+  & > p {
+    color: #fff;
+  }
+}
+
+.text {
+  text-align: center;
+}
+
+.outfits {
+  background-color: #FFB300;
+}
+
+.accessories {
+  background-color: #388E3C;
+}
+
+.hats {
+  background-color: #8E24AA;
+}
+
+.shirts {
+  background-color: #00BCD4;
+}
+
+.pants {
+  background-color: #f44336;
+}
+
+.hidden {
+  display: none;
+}
