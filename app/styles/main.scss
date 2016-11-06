@@ -17,6 +17,17 @@ body {
   overflow: hidden;
 }
 
+.bg_image_face {
+  background: url("../images/face.png") no-repeat center; 
+  background-size: contain;
+  height: 140%;
+  position: relative;
+  top: -17px;
+  display: block;
+  margin: auto;
+  overflow: hidden;
+}
+
 .person {
   height: 100%;
   padding-top: 15%;

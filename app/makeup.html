@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HoyaHacks</title>
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        
+        <script src="scripts/blockly_compressed.js"></script>
+    <script src="scripts/javascript_compressed.js"></script>
+    <script src="scripts/blocks_compressed.js"></script>
+    <script src="scripts/en.js"></script>
+    <script>
+      Blockly.HSV_SATURATION = 1; 
+      Blockly.HSV_VALUE = 1; 
+      Blockly.Blocks['set_color'] = {
+        init: function() {
+          this.jsonInit({
+            "message0": "Set Color to %1 %2 %3",
+            "args0": [
+                {
+                  "type": "field_number",
+                  "name": "RED",
+                  "value": 0
+                },
+                {
+                  "type": "field_number",
+                  "name": "GREEN",
+                  "value": 0
+                },
+                {
+                  "type": "field_number",
+                  "name": "BLUE",
+                  "value": 0
+                }
+            ],
+            "colour": 160,
+            "previousStatement": null,
+            "nextStatement": null,
+          });
+        }
+      };
+
+      Blockly.JavaScript['set_color'] = function(block) {
+
+        var input1 = block.getFieldValue("RED");
+        var input2 = block.getFieldValue("GREEN");
+        var input3 = block.getFieldValue("BLUE");
+        // var argument0 = Blockly.JavaScript.valueToCode(block, 'VALUE',
+        //     Blockly.JavaScript.ORDER_FUNCTION_CALL) || '\'\'';
+        return 'set_color("'+ input1 + '","' + input2 + '","' + input3 +'");';
+      };
+
+      Blockly.Blocks['set_width'] = {
+        init: function() {
+          this.jsonInit({
+            "message0": "Set Line Width to %1 ",
+            "args0": [
+                {
+                  "type": "field_number",
+                  "name": "WIDTH",
+                  "value": 4
+                }
+            ],
+            "colour": 42,
+            "previousStatement": null,
+            "nextStatement": null,
+          });
+        }
+      };
+
+      Blockly.JavaScript['set_width'] = function(block) {
+
+        var input1 = block.getFieldValue("WIDTH");
+        return 'set_width("'+ input1 + '");';
+      };
+
+    </script>
+    
+    </head>
+    <body>
+        <canvas id="can" width="80" height="45" style="position:absolute;top:29%;left:26.5%; z-index: 100;border:.07px solid;"></canvas>
+        <canvas id="can1" width="80" height="45" style="position:absolute;top:30%;left:18.5%;z-index: 100;"></canvas>
+        <canvas id="can2" width="70" height="50" style="position:absolute;top:37%;left:26%;z-index: 100;"></canvas>
+        <canvas id="can3" width="70" height="50" style="position:absolute;top:37%;left:19%;z-index: 100;"></canvas>
+        <canvas id="can4" width="70" height="25" style="position:absolute;top:42%;left:23%;z-index: 100;border:.07px solid"></canvas>
+
+        <div class="row">
+
+      <div class="bg_image">
+        <div class="bg_image_face">
+            
+        </div>
+        <!-- <img id="barebody" class="person" src="images/barebody.png" alt="image">
+        <img id="business_suit" class="person hidden outfit" src="images/businessSuit.png" alt="image">
+        <img id="chef" class="person hidden outfit" src="images/chefBody.png" alt="image">
+        <img id="hacker" class="person hidden outfit" src="images/hoya.png" alt="image">
+        <img id="doctor" class="person hidden outfit" src="images/doctor.png" alt="image">
+        <img id="firefighter" class="person hidden outfit" src="images/firefighter.png" alt="image">
+        <img id="astronaut" class="person hidden outfit" src="images/astronaut.png" alt="image">
+
+        <img id="firefighter_hat" class="person hat hidden" src="images/firefighterHat.png" alt="image">
+        <img id="chef_hat" class="chefHat hat hidden" src="images/chefHat.png" alt="image">
+        <img id="astronaut_hat" class="person hat hidden" src="images/astroHelmet.png" alt="image">
+
+        <img id="surgeon_mask" class="person accessory hidden" src="images/surgeonMask.png" alt="image"> -->
+      </div>
+      <div class="dark_grey right" id="blocklyArea">
+        <div id="blocklyDiv" style="position: absolute"></div>
+      </div>      
+    </div>
+    <div  id="footer" class="dark_grey">
+      <div class="slot outfits">
+        <p class="text">Outfits</p>
+      </div>
+      <div class="slot accessories">
+        <p class="text">Accessories</p>
+      </div>
+      <div class="slot hats">
+        <p class="text">Hats</p>
+      </div>
+      <div class="slot shirts">
+        <p class="text">Shirts</p>
+      </div>
+      <div class="slot pants">
+        <p class="text">Pants</p>
+      </div>
+        
+        <xml id="toolbox" style="display: none">
+            <block type="set_color"></block>
+            <block type="set_width"></block>
+        </xml>
+    </div>
+        <img id="canvasimg" style="position:absolute;top:10%;left:52%;">
+        <script src="scripts/can.js"></script>
+        <script src="scripts/can1.js"></script>
+        <script src="scripts/can2.js"></script>
+        <script src="scripts/can3.js"></script>
+        <script src="scripts/can4.js"></script>
+        <script src="scripts/main2.js"></script>
+    </body>
+    </html>
