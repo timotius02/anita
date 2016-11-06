@@ -7,7 +7,7 @@
     dot_flag = false;
 
      var x = "black",
-         y = 4;
+         y = 1;
     
     function init() {
         canvas = document.getElementById('can');
@@ -62,8 +62,8 @@
         ctx.beginPath();
         ctx.moveTo(prevX, prevY);
         ctx.lineTo(currX, currY);
-        ctx.strokeStyle = x;
-        ctx.lineWidth = y;
+        ctx.strokeStyle = 'rgb('+red+ ', ' + green +', '+ blue +')';
+        ctx.lineWidth = width;
         ctx.stroke();
         ctx.closePath();
     }
@@ -94,7 +94,8 @@
             dot_flag = true;
             if (dot_flag) {
                 ctx.beginPath();
-                ctx.fillStyle = x;
+                ctx.fillStyle = 'rgb('+red+ ', ' + green +', '+ blue +')';
+                console.log(ctx.fillStyle);
                 ctx.fillRect(currX, currY, 2, 2);
                 ctx.closePath();
                 dot_flag = false;

@@ -29,11 +29,20 @@ window.addEventListener('resize', onresize, false);
 onresize();
 Blockly.svgResize(workspace);
 
-var x = "black",
+var red = 0,
+    green = 0,
+    blue = 0,
+    width = 2,
          y = 4;
-function set_color(red, green, blue) {
+function set_color(newRed, newGreen, newBlue) {
+    red = newRed;
+    green = newGreen;
+    blue = newBlue;
+}
 
-} 
+function set_width(newWidth) {
+    width = newWidth;
+}
 // function set_clothes(clothes, selection) {
 
   
