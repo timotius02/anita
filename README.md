@@ -16,7 +16,7 @@
 Use NPM (Package manager bundled with Node.js) to install global dependencies.
 
 ```
-$ npm install -g gulp           # Gulp runs build scripts
+$ npm install -g gulp-cli       # Gulp runs build scripts
 
 $ npm install -g node-sass      # Node-Sass compiles Sass -> CSS
 ```
